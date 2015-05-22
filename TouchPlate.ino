@@ -50,7 +50,7 @@ void main()
         /* Read capsense proximity sensor */
         /* Update all baselines */
         CapSense_CSD_UpdateEnabledBaselines();
-	    /* Start scanning all enabled sensors */
+	/* Start scanning all enabled sensors */
 	CapSense_CSD_ScanEnabledWidgets();
         /* Wait for scanning to complete */
 	while(CapSense_CSD_IsBusy() != 0);
