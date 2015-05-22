@@ -36,10 +36,10 @@ void main()
 
     /* Perform initial proximity read to set max and min */
     CapSense_CSD_UpdateEnabledBaselines();    
-	/* Start scanning all enabled sensors */
-	CapSense_CSD_ScanEnabledWidgets();
+    /* Start scanning all enabled sensors */
+    CapSense_CSD_ScanEnabledWidgets();
     /* Wait for scanning to complete */
-	while(CapSense_CSD_IsBusy() != 0);
+    while(CapSense_CSD_IsBusy() != 0);
     
     /* Set initial limits */
     proximityMax = PROX_RANGE_INIT;
@@ -51,9 +51,9 @@ void main()
         /* Update all baselines */
         CapSense_CSD_UpdateEnabledBaselines();
 	    /* Start scanning all enabled sensors */
-	    CapSense_CSD_ScanEnabledWidgets();
+	CapSense_CSD_ScanEnabledWidgets();
         /* Wait for scanning to complete */
-	    while(CapSense_CSD_IsBusy() != 0);
+	while(CapSense_CSD_IsBusy() != 0);
         proximityCounts = CapSense_CSD_SensorSignal[0] - 5;
         
         /* Floor the counts so no negative values are displayed */
