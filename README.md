@@ -1,2 +1,0 @@
-# TouchPlate
-Project Touch Plate
