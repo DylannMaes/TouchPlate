@@ -55,6 +55,8 @@ void main()
         /* Wait for scanning to complete */
 	    while(CapSense_CSD_IsBusy() != 0);
         proximityCounts = CapSense_CSD_SensorSignal[0] - 5;
+        //proximityCounts = CapSense_CSD_SensorSignal[1] - 5;
+        //proximityCounts = CapSense_CSD_SensorSignal[2] - 5;
         
         /* Floor the counts so no negative values are displayed */
         if(proximityCounts<0)
@@ -82,5 +84,3 @@ void main()
         CyDelay(10);
     }
 }
-
-/* [] END OF FILE */
